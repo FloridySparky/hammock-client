@@ -29,7 +29,7 @@ export default function FinalCTA() {
             Request an Inspection
           </Link>
           <a
-            href="tel:"
+            href="tel:+13215053508"
             className="inline-flex items-center gap-2 text-white px-7 py-3.5 font-semibold text-sm rounded-lg border-[1.5px] border-white/40 hover:border-white hover:bg-white/10 transition-all duration-250"
           >
             <svg

@@ -233,9 +233,12 @@ export default function ContactPage() {
                       </svg>
                       <div>
                         <p className="text-sm font-medium text-navy">Email</p>
-                        <p className="text-[13.5px] text-gray-500">
-                          To be provided
-                        </p>
+                        <a
+                          href="mailto:scott@hammockpropertyinspections.com"
+                          className="text-[13.5px] text-teal hover:underline"
+                        >
+                          scott@hammockpropertyinspections.com
+                        </a>
                       </div>
                     </div>
 
@@ -251,9 +254,12 @@ export default function ContactPage() {
                       </svg>
                       <div>
                         <p className="text-sm font-medium text-navy">Phone</p>
-                        <p className="text-[13.5px] text-gray-500">
-                          To be provided
-                        </p>
+                        <a
+                          href="tel:+13215053508"
+                          className="text-[13.5px] text-teal hover:underline"
+                        >
+                          (321) 505-3508
+                        </a>
                       </div>
                     </div>
 
