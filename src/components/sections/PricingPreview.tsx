@@ -25,7 +25,7 @@ export default function PricingPreview() {
             {pricing.homeInspection.map((row, i) => (
               <div
                 key={row.size}
-                className={`flex justify-between items-center py-3.5 text-sm ${
+                className={`flex justify-between items-center py-3.5 text-sm hover:bg-teal/[0.04] transition-colors duration-200 -mx-3 px-3 rounded ${
                   i < pricing.homeInspection.length - 1
                     ? "border-b border-navy/[0.06]"
                     : ""
@@ -40,7 +40,7 @@ export default function PricingPreview() {
             </p>
             <Link
               href="/pricing"
-              className="mt-8 flex items-center justify-center w-full bg-navy text-white text-sm font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-navy-light hover:shadow-md hover:-translate-y-px transition-all duration-250 tracking-[0.01em]"
+              className="mt-8 flex items-center justify-center w-full bg-navy text-white text-sm font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-navy-light hover:shadow-lg hover:-translate-y-px transition-all duration-250 tracking-[0.01em]"
             >
               See Full Pricing
             </Link>

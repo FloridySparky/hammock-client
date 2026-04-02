@@ -92,7 +92,7 @@ export default function AboutPage() {
           </h2>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-navy px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:-translate-y-px hover:shadow-md transition-all duration-250"
+            className="inline-flex items-center gap-2 bg-white text-navy px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:-translate-y-px hover:shadow-lg transition-all duration-250"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />

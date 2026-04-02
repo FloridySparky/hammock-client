@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Merriweather, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -18,6 +18,11 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#1F3A5F",
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title:

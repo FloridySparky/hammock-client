@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { trustBar } from "@/lib/content";
 
 const TRUST_ICONS = [
@@ -26,8 +29,35 @@ const TRUST_ICONS = [
 ];
 
 export default function TrustBar() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) {
+      setReducedMotion(true);
+      setIsVisible(true);
+      return;
+    }
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="bg-navy py-6 px-6">
+    <div
+      className="bg-navy py-6 px-6"
+      style={
+        reducedMotion
+          ? {}
+          : {
+              opacity: isVisible ? 1 : 0,
+              transition:
+                "opacity 700ms cubic-bezier(0.16, 1, 0.3, 1)",
+            }
+      }
+    >
       <div className="max-w-[1140px] mx-auto flex justify-center flex-wrap gap-5 md:gap-12">
         {trustBar.map((label, i) => (
           <div

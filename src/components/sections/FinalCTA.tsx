@@ -14,7 +14,7 @@ export default function FinalCTA() {
         <div className="flex flex-wrap justify-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-navy px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:-translate-y-px hover:shadow-md transition-all duration-250"
+            className="inline-flex items-center gap-2 bg-white text-navy px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:-translate-y-px hover:shadow-lg transition-all duration-250"
           >
             <svg
               width="16"

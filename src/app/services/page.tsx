@@ -66,8 +66,8 @@ export default function ServicesPage() {
               const slug = service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
               return (
                 <RevealOnScroll key={service.title} delay={i * 75}>
-                  <a href={`#${slug}`} id={slug} className="block bg-white p-7 rounded-lg shadow-sm border border-navy/[0.06] transition-all duration-300 hover:shadow-md hover:-translate-y-[3px]">
-                    <div className="w-10 h-10 bg-teal/10 rounded-[10px] flex items-center justify-center text-teal mb-4">
+                  <a href={`#${slug}`} id={slug} className="group block bg-white p-7 rounded-lg shadow-sm border border-navy/[0.06] transition-all duration-300 hover:shadow-md hover:-translate-y-[3px] hover:border-teal/20">
+                    <div className="w-10 h-10 bg-teal/10 group-hover:bg-teal/20 rounded-[10px] flex items-center justify-center text-teal mb-4 transition-colors duration-300">
                       {SERVICE_ICONS[i]}
                     </div>
                     <h2 className="font-heading text-base font-bold text-navy mb-1.5">
@@ -93,7 +93,7 @@ export default function ServicesPage() {
           </h2>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-navy px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:-translate-y-px hover:shadow-md transition-all duration-250"
+            className="inline-flex items-center gap-2 bg-white text-navy px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:-translate-y-px hover:shadow-lg transition-all duration-250"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />

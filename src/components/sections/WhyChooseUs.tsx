@@ -46,8 +46,8 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {whyChooseUs.map((item, i) => (
             <RevealOnScroll key={item.title} delay={i * 75}>
-              <div className="flex gap-4 p-6 rounded-lg bg-background border border-navy/[0.04]">
-                <div className="w-11 h-11 shrink-0 bg-teal/[0.12] rounded-[10px] flex items-center justify-center text-teal">
+              <div className="group flex gap-4 p-6 rounded-lg bg-background border border-navy/[0.04] hover:border-teal/15 transition-colors duration-300">
+                <div className="w-11 h-11 shrink-0 bg-teal/[0.12] group-hover:bg-teal/[0.18] rounded-[10px] flex items-center justify-center text-teal transition-colors duration-300">
                   {WHY_ICONS[i]}
                 </div>
                 <div>

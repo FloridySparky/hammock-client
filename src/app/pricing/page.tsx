@@ -30,7 +30,7 @@ export default function PricingPage() {
               {pricing.homeInspection.map((row, i) => (
                 <div
                   key={row.size}
-                  className={`flex justify-between items-center py-3.5 text-sm ${
+                  className={`flex justify-between items-center py-3.5 text-sm hover:bg-teal/[0.04] transition-colors duration-200 -mx-3 px-3 rounded ${
                     i < pricing.homeInspection.length - 1
                       ? "border-b border-navy/[0.06]"
                       : ""
@@ -67,7 +67,7 @@ export default function PricingPage() {
               {pricing.insuranceInspections.map((row, i) => (
                 <div
                   key={row.service}
-                  className={`flex items-center py-3.5 text-sm ${
+                  className={`flex items-center py-3.5 text-sm hover:bg-teal/[0.04] transition-colors duration-200 -mx-3 px-3 rounded ${
                     i < pricing.insuranceInspections.length - 1
                       ? "border-b border-navy/[0.06]"
                       : ""
@@ -96,7 +96,7 @@ export default function PricingPage() {
               {pricing.additionalServices.map((row, i) => (
                 <div
                   key={row.service}
-                  className={`flex justify-between items-start py-3.5 text-sm ${
+                  className={`flex justify-between items-start py-3.5 text-sm hover:bg-teal/[0.04] transition-colors duration-200 -mx-3 px-3 rounded ${
                     i < pricing.additionalServices.length - 1
                       ? "border-b border-navy/[0.06]"
                       : ""
@@ -124,7 +124,7 @@ export default function PricingPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-navy text-white px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:bg-navy-light hover:-translate-y-px hover:shadow-md transition-all duration-250"
+                className="inline-flex items-center gap-2 bg-navy text-white px-7 py-3.5 font-semibold text-sm rounded-lg shadow-sm hover:bg-navy-light hover:-translate-y-px hover:shadow-lg transition-all duration-250"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />

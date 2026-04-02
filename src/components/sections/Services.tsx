@@ -65,8 +65,8 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
             <RevealOnScroll key={service.title} delay={i * 75}>
-              <Link href="/services" className="block bg-white p-7 rounded-lg shadow-sm border border-navy/[0.06] transition-all duration-300 hover:shadow-md hover:-translate-y-[3px]">
-                <div className="w-10 h-10 bg-teal/10 rounded-[10px] flex items-center justify-center text-teal mb-4">
+              <Link href="/services" className="group block bg-white p-7 rounded-lg shadow-sm border border-navy/[0.06] transition-all duration-300 hover:shadow-md hover:-translate-y-[3px] hover:border-teal/20">
+                <div className="w-10 h-10 bg-teal/10 group-hover:bg-teal/20 rounded-[10px] flex items-center justify-center text-teal mb-4 transition-colors duration-300">
                   {SERVICE_ICONS[i]}
                 </div>
                 <h3 className="font-heading text-base font-bold text-navy mb-1.5">

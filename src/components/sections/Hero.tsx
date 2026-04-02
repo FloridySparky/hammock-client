@@ -1,22 +1,55 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { hero } from "@/lib/content";
 
 export default function Hero() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) {
+      setReducedMotion(true);
+      setIsLoaded(true);
+      return;
+    }
+    requestAnimationFrame(() => setIsLoaded(true));
+  }, []);
+
+  const fadeStyle = (delay: number): React.CSSProperties =>
+    reducedMotion
+      ? {}
+      : {
+          opacity: isLoaded ? 1 : 0,
+          transform: isLoaded ? "translateY(0)" : "translateY(24px)",
+          transition: `opacity 700ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 700ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        };
+
   return (
     <section id="hero" className="bg-white py-20 lg:py-[80px] px-6">
       <div className="max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
-          <h1 className="font-heading font-black text-navy text-[clamp(2rem,1.5rem+2.2vw,2.75rem)] leading-[1.3] tracking-tight mb-5">
+          <h1
+            className="font-heading font-black text-navy text-[clamp(2rem,1.5rem+2.2vw,2.75rem)] leading-[1.3] tracking-tight mb-5"
+            style={fadeStyle(0)}
+          >
             {hero.headline}
           </h1>
-          <p className="text-base text-gray-600 leading-relaxed max-w-[520px] mb-8">
+          <p
+            className="text-base text-gray-600 leading-relaxed max-w-[520px] mb-8"
+            style={fadeStyle(120)}
+          >
             {hero.subheadline}
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-wrap gap-3 mb-10" style={fadeStyle(240)}>
             <Link
               href={hero.ctaPrimary.href}
-              className="inline-flex items-center justify-center bg-navy text-white text-[15px] font-semibold px-7 py-3.5 rounded-lg shadow-sm hover:bg-navy-light hover:shadow-md hover:-translate-y-px transition-all duration-250 tracking-[0.01em]"
+              className="inline-flex items-center justify-center bg-navy text-white text-[15px] font-semibold px-7 py-3.5 rounded-lg shadow-sm hover:bg-navy-light hover:shadow-lg hover:-translate-y-px transition-all duration-250 tracking-[0.01em]"
             >
               {hero.ctaPrimary.label}
             </Link>
@@ -28,7 +61,10 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+            style={fadeStyle(360)}
+          >
             {hero.trustBullets.map((bullet) => (
               <div
                 key={bullet}

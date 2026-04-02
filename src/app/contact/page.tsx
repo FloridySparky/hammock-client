@@ -188,7 +188,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg shadow-sm hover:bg-navy-light hover:-translate-y-px hover:shadow-md transition-all duration-250 tracking-[0.01em]"
+                  className="w-full bg-navy text-white text-sm font-semibold px-6 py-3.5 rounded-lg shadow-sm hover:bg-navy-light hover:-translate-y-px hover:shadow-lg transition-all duration-250 tracking-[0.01em]"
                 >
                   Send Request
                 </button>
