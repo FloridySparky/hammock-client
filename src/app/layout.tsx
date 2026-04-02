@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${merriweather.variable} ${inter.variable}`}>
       <body className="font-body bg-background text-charcoal antialiased">
         <Header />
-        <main className="pb-16 md:pb-0">{children}</main>
+        <main className="pb-20 md:pb-0">{children}</main>
         <Footer />
         <MobileCTA />
       </body>

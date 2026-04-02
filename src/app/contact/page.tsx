@@ -4,7 +4,7 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { inspectionTypes, contact } from "@/lib/content";
 
 const inputClasses =
-  "w-full bg-white border border-navy/[0.08] rounded-lg py-3 px-4 text-sm text-charcoal placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors duration-200";
+  "w-full bg-white border border-navy/[0.08] rounded-lg py-3 px-4 text-base sm:text-sm text-charcoal placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors duration-200";
 
 export default function ContactPage() {
   return (
