@@ -1,17 +1,27 @@
 import Link from "next/link";
-import { footerLinks, copyright as siteCopyright } from "@/lib/content";
+import Image from "next/image";
+import { footerLinks, copyright as siteCopyright, logo, businessName } from "@/lib/content";
 
 export default function Footer() {
   return (
     <footer className="bg-navy-dark py-12 pb-8 px-6 text-[13px] text-white/60">
       <div className="max-w-[1140px] mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         <div className="text-center md:text-left">
-          <Link
-            href="/"
-            className="font-heading font-bold text-lg text-white tracking-tight"
-          >
-            Hammock{" "}
-            <span className="text-white/40">Property Inspections</span>
+          <Link href="/" className="flex items-center justify-center md:justify-start">
+            {logo.type === "image" ? (
+              <Image
+                src={logo.imagePath}
+                alt={businessName}
+                width={Math.round(32 * 2.5)}
+                height={32}
+                className="h-8 w-auto brightness-0 invert"
+              />
+            ) : (
+              <span className="font-heading font-bold text-lg text-white tracking-tight">
+                Hammock{" "}
+                <span className="text-white/40">Property Inspections</span>
+              </span>
+            )}
           </Link>
           <p className="mt-1">Florida&apos;s Space Coast</p>
         </div>

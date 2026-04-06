@@ -63,8 +63,15 @@ export interface PricingData {
   disclaimer: string;
 }
 
+export interface LogoConfig {
+  type: "text" | "image";
+  imagePath: string;
+  imageHeight: number;
+}
+
 export interface SiteData {
   businessName: string;
+  logo: LogoConfig;
   copyright: string;
   brandStatement: string;
   contact: ContactInfo;
@@ -85,6 +92,7 @@ export interface SiteData {
 const data = siteData as SiteData;
 
 export const businessName = data.businessName;
+export const logo = data.logo;
 export const copyright = data.copyright;
 export const brandStatement = data.brandStatement;
 export const contact = data.contact;

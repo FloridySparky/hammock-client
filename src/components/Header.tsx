@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { navLinks, contact } from "@/lib/content";
+import { navLinks, contact, logo, businessName } from "@/lib/content";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
@@ -13,8 +14,21 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-navy/[0.08]">
       <div className="max-w-[1140px] mx-auto flex items-center justify-between h-[72px] px-6">
-        <Link href="/" className="font-heading font-bold text-lg text-navy tracking-tight">
-          Hammock <span className="text-teal">Property Inspections</span>
+        <Link href="/" className="flex items-center">
+          {logo.type === "image" ? (
+            <Image
+              src={logo.imagePath}
+              alt={businessName}
+              width={Math.round(logo.imageHeight * 2.5)}
+              height={logo.imageHeight}
+              className="h-10 w-auto"
+              priority
+            />
+          ) : (
+            <span className="font-heading font-bold text-lg text-navy tracking-tight">
+              Hammock <span className="text-teal">Property Inspections</span>
+            </span>
+          )}
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

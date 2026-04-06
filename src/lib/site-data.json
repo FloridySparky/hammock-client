@@ -1,5 +1,10 @@
 {
   "businessName": "Hammock Property Inspections",
+  "logo": {
+    "type": "text",
+    "imagePath": "/logo.png",
+    "imageHeight": 40
+  },
   "copyright": "\u00a9 2026 Hammock Property Inspections, LLC. All rights reserved.",
   "brandStatement": "Hammock Property Inspections provides clear, professional home inspections in Florida, combining thorough reporting, drone-assisted capability, and an analytical approach clients can trust.",
   "contact": {
