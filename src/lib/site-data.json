@@ -27,7 +27,7 @@
     { "label": "Pricing", "href": "/pricing" },
     { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/contact" },
-    { "label": "Privacy Policy", "href": "#" }
+    { "label": "Privacy Policy", "href": "/privacy" }
   ],
   "hero": {
     "headline": "Professional Home Inspections on Florida\u2019s Space Coast",
@@ -108,7 +108,7 @@
     ],
     "insuranceInspections": [
       { "service": "Wind Mitigation Inspection", "withHome": "$95", "standalone": "$140" },
-      { "service": "Roof Condition & Remaining Life Report", "withHome": "$95", "standalone": "$140" },
+      { "service": "Roof Condition & Estimated Remaining Life Report", "withHome": "$95", "standalone": "$140" },
       { "service": "Four Point Inspection", "withHome": "$70", "standalone": "$125" },
       { "service": "Storm Damage Assessment", "withHome": "\u2014", "standalone": "$225" }
     ],
