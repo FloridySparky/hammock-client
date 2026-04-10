@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { hero } from "@/lib/content";
 
 export default function Hero() {
@@ -86,26 +87,39 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-[#e8edf3] to-[#dde5ed] rounded-xl aspect-[4/3] flex items-center justify-center border-2 border-dashed border-[#c5d0de] relative overflow-hidden max-h-[240px] lg:max-h-none">
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-navy/[0.03]" />
-          <div className="text-center relative z-10">
-            <svg
-              className="mx-auto mb-2 opacity-50 text-[#8a9bb5]"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <circle cx="8.5" cy="8.5" r="1.5" />
-              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-            </svg>
-            <p className="text-[#8a9bb5] text-sm font-medium">
-              Hero Image Placeholder
-            </p>
-          </div>
+        <div className="relative rounded-xl aspect-[4/3] overflow-hidden max-h-[240px] lg:max-h-none">
+          {hero.heroImage.type === "image" ? (
+            <Image
+              src={hero.heroImage.imagePath}
+              alt={hero.headline}
+              fill
+              className="object-cover rounded-xl"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
+          ) : (
+            <div className="bg-gradient-to-br from-[#e8edf3] to-[#dde5ed] w-full h-full flex items-center justify-center border-2 border-dashed border-[#c5d0de] rounded-xl relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-navy/[0.03]" />
+              <div className="text-center relative z-10">
+                <svg
+                  className="mx-auto mb-2 opacity-50 text-[#8a9bb5]"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                </svg>
+                <p className="text-[#8a9bb5] text-sm font-medium">
+                  Hero Image Placeholder
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -46,6 +46,7 @@ export interface HeroData {
   ctaPrimary: { label: string; href: string };
   ctaSecondary: { label: string; href: string };
   trustBullets: string[];
+  heroImage: { type: "placeholder" | "image"; imagePath: string };
 }
 
 export interface ContactInfo {

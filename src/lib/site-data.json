@@ -39,7 +39,11 @@
       "FAA certified drone pilot",
       "Civil engineering background",
       "30+ years experience"
-    ]
+    ],
+    "heroImage": {
+      "type": "placeholder",
+      "imagePath": "/hero.jpg"
+    }
   },
   "trustBar": [
     "Licensed",
