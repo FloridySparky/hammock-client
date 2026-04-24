@@ -36,9 +36,9 @@
     "ctaSecondary": { "label": "View Pricing", "href": "/pricing" },
     "trustBullets": [
       "Licensed & insured",
-      "Straightforward, no-nonsense communication",
       "Civil engineering background",
-      "30+ years of professional experience"
+      "30+ years of professional experience",
+      "Straightforward, no-nonsense communication"
     ],
     "heroImage": {
       "type": "image",
